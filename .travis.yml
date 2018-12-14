@@ -1,0 +1,7 @@
+language: go
+
+go:
+- "1.11.x"
+
+notifications:
+  slack: tandil:4T1yqlek0bHU5cmrQZCzK0FV
