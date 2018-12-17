@@ -2,9 +2,12 @@
 
 Slack bot for playing around with golang. It sends "anonymous" messages to a user or channel.
 
-## Steps for running locally
+## Running with go
 
 1. `go get github.com/cesdperez/anonymous-bot`
-2. set `SLACK_TOKEN` env var
-3. `go build github.com/cesdperez/anonymous-bot`
-4. `go run github.com/cesdperez/anonymous-bot` 
+2. `go build github.com/cesdperez/anonymous-bot`
+3. `SLACK_TOKEN=<your-token> go run github.com/cesdperez/anonymous-bot` 
+
+## Running with Docker
+
+2. `docker run -e "SLACK_TOKEN=<your-token>" -d infortino/anonymous-bot`

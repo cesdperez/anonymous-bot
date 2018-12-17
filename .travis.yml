@@ -4,4 +4,15 @@ go:
 - "1.11.x"
 
 notifications:
+  email: false
   slack: tandil:4T1yqlek0bHU5cmrQZCzK0FV
+
+services:
+- docker
+
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ]; then
+  docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+  docker build -t infortino/anonymous-bot .;
+  docker push infortino/anonymous-bot;
+  fi
